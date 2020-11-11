@@ -1,0 +1,13 @@
+.blue {
+    border-bottom: 5px solid blue;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title {
+    width: 340px;
+    text-align: center;
+}

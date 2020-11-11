@@ -1,0 +1,86 @@
+.someClass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+}
+
+.error {
+    border: 1px solid red;
+    border-radius: 5px;
+    height: 25px;
+    margin-right: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    width: 217px;
+}
+.good{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 25px;
+    margin-right: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    width: 217px;
+}
+.buttons {
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    color: #fff;
+    display:block;
+    width:100px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 20px auto;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: background-color 0.1s linear;
+
+}
+
+.buttons {
+    background-color: rgb( 43, 153, 91 );
+    border: 1px solid rgb( 33, 126, 74 );
+}
+
+.buttons:hover, .buttons:focus
+ {
+    background-color: rgb( 75, 183, 141 );
+}
+.buttons:active
+{
+    border: none;
+}
+span {
+    margin-right: 5px;
+    color: red;
+}
+.total {
+    margin-left: 10px;
+    font-size: 22px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: background-color 0.1s linear;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    color: #fff;
+    background-color: rgb( 43, 153, 91 );
+    border: 1px solid rgb( 33, 126, 74 );
+    padding: 0 10px;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total span {
+    color: white;
+    text-align: center;
+    margin: 0;
+    display: block;
+}
+.errorWrap{
+    margin-left: 10px;
+    font-size: 15px;
+
+}
