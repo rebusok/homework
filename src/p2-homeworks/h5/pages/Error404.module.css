@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    max-width: 420px;
+    padding: 10px 20px;
+    position: relative;
+}
+.header img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+.text{
+    
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    position: absolute;
+    top: 180px;
+    right: 0;
+    z-index: 200;
+}
+.text a {
+    text-decoration: none;
+    color: black;
+}
