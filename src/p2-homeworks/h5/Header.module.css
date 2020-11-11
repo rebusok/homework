@@ -50,3 +50,7 @@
     transition:opacity 0.4s linear;
     
 }
+.dropbox_list:hover{
+    opacity: 1;
+    left: 0;
+}
