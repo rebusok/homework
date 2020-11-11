@@ -21,7 +21,7 @@
     "typescript": "~3.7.2",
     "uuid": "^8.3.1"
   },
-  "homepage": "http://rebusok.github.io/homework-1/tree/main/simple-react-homeworks-master",
+  "homepage": "http://rebusok.github.io/homework",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

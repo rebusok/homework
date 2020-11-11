@@ -1,11 +1,22 @@
-.dropbox {
+* {
+    box-sizing: border-box;
+}
+.dropbox_head {
     position: relative;
     margin-bottom: 10px;
     min-height: 0;
-    transition:min-height 0.4s linear;
+    transition:min-height 0.3s linear;
+    min-width: 412px;
+    
 }
 .dropbox span {
-    margin-left: 50px;
+    
+}
+.dropbox {
+    background-color: gray;
+    border-radius: 10px;
+    padding: 5px 15px;
+    
 }
 .dropbox_list {
     display: flex;
@@ -14,9 +25,11 @@
     justify-content: center;
     width: 150px;
     position: absolute;
-    top: 30px;
-    left: -99999px;
+    top: 35px;
+    left: 0px;
     opacity: 0;
+    background-color: gray;
+    border-radius: 10px;
 }
 .dropbox_list a {
     padding-left: 5px;
@@ -27,7 +40,7 @@
 .dropbox_list .active  {
     color: red;
 }
-.dropbox:hover {
+.dropbox_head:hover {
     min-height: 140px;
     
 }
