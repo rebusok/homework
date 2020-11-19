@@ -10,8 +10,9 @@ function HW6() {
         saveState<string>("editable-span-value", value);
     };
     const restore = () => {
-        // setValue();
+        setValue(restoreState("editable-span-value", value));
     };
+    
 
     return (
         <div>
@@ -23,12 +24,13 @@ function HW6() {
                 <SuperEditableSpan
                     value={value}
                     onChangeText={setValue}
-                    spanProps={{children: value ? undefined : "enter text..."}}
+                    spanProps={{children: value ? undefined : "Enter text..." }}
                 />
+                {/* <img src={svg} alt='icon'/> */}
             </div>
             <SuperButton onClick={save}>save</SuperButton>
             <SuperButton onClick={restore}>restore</SuperButton>
-
+            
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperEditableSpan/>*/}
