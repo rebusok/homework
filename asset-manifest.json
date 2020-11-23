@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/homework/static/css/main.ce846e64.chunk.css",
+    "main.css": "/homework/static/css/main.2160438c.chunk.css",
     "main.js": "/homework/static/js/main.255efbdf.chunk.js",
     "main.js.map": "/homework/static/js/main.255efbdf.chunk.js.map",
     "runtime-main.js": "/homework/static/js/runtime-main.f38b6f31.js",
@@ -8,16 +8,16 @@
     "static/js/2.7063533b.chunk.js": "/homework/static/js/2.7063533b.chunk.js",
     "static/js/2.7063533b.chunk.js.map": "/homework/static/js/2.7063533b.chunk.js.map",
     "index.html": "/homework/index.html",
-    "precache-manifest.02ab2b45b83d988e0f38aae6d30c69b9.js": "/homework/precache-manifest.02ab2b45b83d988e0f38aae6d30c69b9.js",
+    "precache-manifest.503c640a28164ab7c427d951e6c84e73.js": "/homework/precache-manifest.503c640a28164ab7c427d951e6c84e73.js",
     "service-worker.js": "/homework/service-worker.js",
-    "static/css/main.ce846e64.chunk.css.map": "/homework/static/css/main.ce846e64.chunk.css.map",
+    "static/css/main.2160438c.chunk.css.map": "/homework/static/css/main.2160438c.chunk.css.map",
     "static/js/2.7063533b.chunk.js.LICENSE.txt": "/homework/static/js/2.7063533b.chunk.js.LICENSE.txt",
     "static/media/img_er.png": "/homework/static/media/img_er.353a8786.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f38b6f31.js",
     "static/js/2.7063533b.chunk.js",
-    "static/css/main.ce846e64.chunk.css",
+    "static/css/main.2160438c.chunk.css",
     "static/js/main.255efbdf.chunk.js"
   ]
 }
