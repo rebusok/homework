@@ -8,6 +8,7 @@
 .checkbox_inp, .super_input  {
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 
 .checkbox_inp:before  {
