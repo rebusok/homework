@@ -1,5 +1,5 @@
 import React, {ChangeEvent, InputHTMLAttributes, DetailedHTMLProps} from "react";
-
+import s from './SuperRadio.module.css';
 type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type SuperRadioPropsType = DefaultRadioPropsType & {
@@ -16,18 +16,31 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // onChange, onChangeOption
+        if (onChangeOption){
+            onChangeOption(e.target.value)
+            
+        }
+        if (onChange) {
+            onChange(e)
+            
+        }
     }
 
 
     const mappedOptions: any[] = options ? options.map((o, i) => ( // map options with key
-        <label key={name + "-" + i}>
-            <input
+        <div className={s.wrapper}  key={name + "-" + i}>
+        <label className={ o ===value ? s.super_input : s.checkbox_inp}>            
+            <input 
                 type={"radio"}
+                onChange={onChangeCallback}
+                value={o}
+                checked={o ===value}
                 // name, checked, value, onChange
             />
+            
             {o}
         </label>
+        </div>
     )) : [];
 
     return (
