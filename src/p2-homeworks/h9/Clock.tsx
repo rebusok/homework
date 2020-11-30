@@ -23,6 +23,10 @@ function Clock() {
         }, 1000);
         setTimerId(id);
     }
+    const hide = () => {
+        setShow(false);
+        clearInterval(timerId);
+    }
 
     const onMouseEnter = () => {
         setShowData(true)
@@ -83,6 +87,7 @@ console.log(ears);
 
             <SuperButton onClick={start}>start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>
+            <SuperButton onClick={hide}>hide</SuperButton>
 
         </div>
     );
