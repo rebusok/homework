@@ -7,19 +7,15 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false);
     const [showData, setShowData] = useState<boolean>(false);
     const stop = () => {
-
         clearInterval(timerId);
     }
 
     const start = () => {
         stop();
-
         const id: number = window.setInterval(() => {
             const date = new Date();
-
             setDate(date)
             setShow(true);
-
         }, 1000);
         setTimerId(id);
     }
