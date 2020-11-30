@@ -1,0 +1,28 @@
+.myBox {
+    position: relative;
+    display: inline-block;
+}
+select {
+    display: inline-block;
+    height: 36px;
+    width: 150px;
+    outline: none;
+    color: #74646e;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #999;
+    background: #eee;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+/* Select arrow styling */
+.myBox .myArrow{
+    width: 23px;
+    height: 28px;
+    position: absolute;
+    display: inline-block;
+    top: 1px;
+    right: 3px;
+    background: url("https://cdn.pixabay.com/photo/2013/03/29/13/39/download-97606_1280.png") right / 90% no-repeat #eee;
+    pointer-events: none;
+}
