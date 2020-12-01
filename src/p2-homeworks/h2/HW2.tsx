@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Affairs from "./Affairs";
+import WrappAcc from "../../p1-main/m1-ui/u1-app/Hoc/layout/wrappAcc/WrappAcc";
 
 
 // types
@@ -47,9 +48,7 @@ function HW2() {
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id)); // need to fix any
 
     return (
-        <div>
-            <hr/>
-            homeworks 2
+        <WrappAcc title={'homeworks 2'}>
             {/*should work (должно работать)*/}
             <Affairs
                 data={filteredAffairs}
@@ -58,7 +57,7 @@ function HW2() {
                 filter={filter}
             />
 
-        </div>
+        </WrappAcc>
     );
 }
 

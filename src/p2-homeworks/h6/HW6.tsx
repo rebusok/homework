@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import SuperEditableSpan from "./common/c4-SuperEditableSpan/SuperEditableSpan";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 import {restoreState, saveState} from "./localStorage/localStorage";
+import WrappAcc from "../../p1-main/m1-ui/u1-app/Hoc/layout/wrappAcc/WrappAcc";
 
 function HW6() {
     const [value, setValue] = useState<string>("");
@@ -15,9 +16,7 @@ function HW6() {
     
 
     return (
-        <div>
-            <hr/>
-            homeworks 6
+        <WrappAcc title={'homeworks 6'}>
 
             {/*should work (должно работать)*/}
             <div>
@@ -31,11 +30,11 @@ function HW6() {
             <SuperButton onClick={save}>save</SuperButton>
             <SuperButton onClick={restore}>restore</SuperButton>
             
-            <hr/>
+
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperEditableSpan/>*/}
-            <hr/>
-        </div>
+
+        </WrappAcc>
     );
 }
 

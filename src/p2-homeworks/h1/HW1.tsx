@@ -1,6 +1,6 @@
 import React from "react";
 import Message from "./Message";
-
+import WrappAcc from '../../p1-main/m1-ui/u1-app/Hoc/layout/wrappAcc/WrappAcc'
 
 
 export type MessageType = {
@@ -18,24 +18,24 @@ const messageData = {
 
 function HW1() {
     return (
-        <div>
-            <hr/>
-            homeworks 1
+        <WrappAcc title={'homeworks 1'}>
+            <div>
 
-            should work (должно работать)
 
-            <Message
-                avatar={messageData.avatar}
-                name={messageData.name}
-                message={messageData.message}
-                time={messageData.time}
-            />
+                <Message
+                    avatar={messageData.avatar}
+                    name={messageData.name}
+                    message={messageData.message}
+                    time={messageData.time}
+                />
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeMessage/>*/}
-            <hr/>
-        </div>
+
+                {/*для личного творчества, могу проверить*/}
+                {/*<AlternativeMessage/>*/}
+
+            </div>
+        </WrappAcc>
+
     );
 }
 

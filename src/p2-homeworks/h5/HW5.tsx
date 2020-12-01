@@ -2,18 +2,29 @@ import React from "react";
 import Header from "./Header";
 import Routes from "./Routes";
 import {HashRouter} from 'react-router-dom'
-function HW5() {
+
+type HW5Type = {
+    isOpen: boolean
+    onClose: () => void
+}
+
+
+function HW5(props:HW5Type) {
+
     return (
-        <div>
+        <React.Fragment>
             {/*в gh-pages лучше работает HashRouter*/}
             <HashRouter>
 
-            <Header/>
+            <Header
+                isOpen={props.isOpen}
+                onClose={props.onClose}
+            />
 
             <Routes/>
 
             </HashRouter>
-        </div>
+        </React.Fragment>
     );
 }
 

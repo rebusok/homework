@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import GreetingContainer from "./GreetingContainer";
 import { v1 } from "uuid";
-import s from './HW3.module.css';
+import WrappAcc from "../../p1-main/m1-ui/u1-app/Hoc/layout/wrappAcc/WrappAcc";
 
 // types
 export type UserType = {
@@ -25,9 +25,8 @@ function HW3() {
     }
 
     return (
-        <div>
-            <hr/>
-            <div className={s.title}>Homeworks 3</div>
+        <WrappAcc title={'Homeworks 3'}>
+
 
 
             {/*should work (должно работать)*/}
@@ -37,7 +36,7 @@ function HW3() {
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeGreeting/>*/}
 
-        </div>
+        </WrappAcc>
     );
 }
 

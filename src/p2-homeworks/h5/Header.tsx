@@ -1,18 +1,27 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import s from './Header.module.css';
+import s from './Header.module.scss';
 import {PATH}  from './Routes';
-function Header() {
+import BackDrop from "../../p1-main/m1-ui/u1-app/Hoc/navigation/BackDrop/BackDrop";
+function Header(props:any) {
+    const cls = [
+        s.Header
+    ]
+    console.log(props)
+    if (!props.isOpen){
+        cls.push(s.close)
+    }
     return (
-        <div className={s.dropbox_head}>        
-            <div className={s.dropbox}> <span className={s.dropbox_btn}>Menu</span>
-                <nav className={s.dropbox_list}>
-                    <NavLink exact to={PATH.PRE_JUNIOR} activeClassName={s.active}>Pre-junior</NavLink>  
-                    <NavLink to={PATH.JUNIOR} activeClassName={s.active}>Junior</NavLink>  
-                    <NavLink to={PATH.JUNIOR_PLUS} activeClassName={s.active}>JuniorPlus</NavLink>
+        <React.Fragment>
+                <nav className={cls.join(' ')}>
+                    <div className={s.wrapper}>
+                        <NavLink exact to={PATH.PRE_JUNIOR} activeClassName={s.active}>Pre-junior</NavLink>
+                        <NavLink to={PATH.JUNIOR} activeClassName={s.active}>Junior</NavLink>
+                        <NavLink to={PATH.JUNIOR_PLUS} activeClassName={s.active}>JuniorPlus</NavLink>
+                    </div>
                 </nav>
-            </div>
-        </div>
+            {props.isOpen ? <BackDrop onClick={props.onClose}/> : null}
+        </React.Fragment>
     );
 }
 

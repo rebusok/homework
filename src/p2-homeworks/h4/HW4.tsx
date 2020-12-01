@@ -3,6 +3,7 @@ import SuperInputText from "./common/c1-SuperInputText/SuperInputText";
 import s from "./HW4.module.css";
 import SuperButton from "./common/c2-SuperButton/SuperButton";
 import SuperCheckbox from "./common/c3-SuperCheckbox/SuperCheckbox";
+import WrappAcc from "../../p1-main/m1-ui/u1-app/Hoc/layout/wrappAcc/WrappAcc";
 
 function HW4() {
     const [text, setText] = useState<string>("");
@@ -19,9 +20,7 @@ function HW4() {
     const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked);
 
     return (
-        <div className={s.title}>
-            <hr/>
-            homeworks 4
+        <WrappAcc title={'homeworks 4'}>
 
             <div className={s.column}>
                 {/*should work (должно работать)*/}
@@ -59,7 +58,7 @@ function HW4() {
             {/*<AlternativeSuperButton/>*/}
             {/*<AlternativeSuperCheckbox/>*/}
 
-        </div>
+        </WrappAcc>
     );
 }
 

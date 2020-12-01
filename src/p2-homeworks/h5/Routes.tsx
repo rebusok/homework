@@ -4,6 +4,7 @@ import Error404 from './pages/Error404';
 import PreJunior from './pages/PreJunior';
 import Junior from './pages/Junior';
 import JuniorPlus from './pages/JuniorPlus';
+import s from './Routes.module.scss';
 export const PATH = {
     PRE_JUNIOR: "/pre-junior",
     JUNIOR: '/junior',
@@ -12,7 +13,7 @@ export const PATH = {
 
 function Routes() {
     return (
-        <div>
+        <main className={s.main}>
             {/*Switch выбирает первый подходящий роут*/}
             <Switch>
 
@@ -28,7 +29,7 @@ function Routes() {
             <Route render={() => <Error404/>}/>
 
             </Switch>
-        </div>
+        </main>
     );
 }
 

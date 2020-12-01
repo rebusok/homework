@@ -1,0 +1,19 @@
+.wrappBtn {
+    display: flex;
+    margin-top: 10px;
+    padding: 5px 20px;
+}
+.wrappBtn button {
+    background-color: #0aafe6;
+    border: none;
+    text-transform: uppercase;
+    width: 90px;
+}
+.wrappBtn button:active, .wrappBtn button:focus {
+    outline: none;
+    background-color: #0aafe6;
+}
+.wrappBtn button:hover{
+    background-color: #0aafe6;
+    opacity: 0.7;
+}

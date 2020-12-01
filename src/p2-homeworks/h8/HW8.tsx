@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import {homeWorkReducer} from "./bll/homeWorkReducer";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
-
+import s from './HW8.module.css';
+import WrappAcc from "../../p1-main/m1-ui/u1-app/Hoc/layout/wrappAcc/WrappAcc";
 const initialPeople = [
     {_id: 0, name: "Кот", age: 3},
     {_id: 1, name: "Александр", age: 66},
@@ -24,24 +25,28 @@ function HW8() {
     const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'down'}))
     const check18 = () => setPeople(homeWorkReducer(initialPeople, {type: 'check', payload: 18}))
     return (
-        <div>
-            <hr/>
-            homeworks 8
+        <WrappAcc title={'homeworks 8'}>
+
+
 
             {/*should work (должно работать)*/}
 
             {finalPeople}
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
+            <div className={s.wrappBtn}>
+                <SuperButton onClick={sortUp}>sort up</SuperButton>
+                <SuperButton onClick={sortDown}>sort down</SuperButton>
+                <SuperButton onClick={check18}>check 18</SuperButton>
+            </div>
 
 
-            <div><SuperButton onClick={check18}>check 18</SuperButton></div>
 
-            <hr/>
+
+
+
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativePeople/>*/}
-            <hr/>
-        </div>
+
+        </WrappAcc>
     );
 }
 
