@@ -29,10 +29,10 @@
 {
     background-color: rgb(250, 9, 58);
 }
-.buttons:active
+.buttons:active, .buttons:focus
 {
     border: none;
-
+    outline: none;
 }
 .flex_but {
     display: flex;
@@ -41,16 +41,22 @@
     background-color: rgb(139, 210, 165);
     color: black;
 }
-.btn_act:focus {
+.btn_act:focus, .btn_act:active {
     background-color: rgb(132, 220, 165);
+    outline: none;
+    border: none;
+}
+button:active, button:focus {
+    outline: none;
+
 }
 .name {
-    color: black;
+    color: #fff;
 }
 .head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding: 0px 30px;
+    padding: 0 30px;
 }

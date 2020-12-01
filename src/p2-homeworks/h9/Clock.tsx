@@ -18,7 +18,7 @@ function Clock(props:ClockType) {
     }
 
     const start = () => {
-
+        stop();
         const id: number = window.setInterval(() => {
             const date = new Date();
             setDate(date)

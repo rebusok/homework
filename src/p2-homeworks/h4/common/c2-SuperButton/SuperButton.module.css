@@ -33,5 +33,5 @@
 .buttons:active
 {
     border: none;
-
+    opacity: .7;
 }
