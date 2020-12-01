@@ -34,3 +34,18 @@
 .Header  a:hover, .active{
     opacity: .7;
 }
+@media screen and (max-width: 600px){
+    .Header {
+        max-width: 230px;
+        background: transparent;
+
+        .wrapper{
+
+            a{
+                color: #fff;
+                background-color: transparent;
+                margin-top: 50px;
+            }
+        }
+    }
+}
