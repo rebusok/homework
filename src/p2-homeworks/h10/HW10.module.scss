@@ -1,0 +1,9 @@
+.content button {
+    width: 120px;
+    text-transform: uppercase;
+    background-color: #0aafe6;
+    border: none;
+    &:hover{
+        opacity: 0.7;
+    }
+}

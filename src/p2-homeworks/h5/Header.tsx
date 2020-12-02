@@ -7,7 +7,7 @@ function Header(props:any) {
     const cls = [
         s.Header
     ]
-    console.log(props)
+
     if (!props.isOpen){
         cls.push(s.close)
     }
