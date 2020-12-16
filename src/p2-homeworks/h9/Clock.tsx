@@ -20,10 +20,10 @@ function Clock(props:ClockType) {
     const start = () => {
         stop();
         const id: number = window.setInterval(() => {
-            const date = new Date();
+            const date:Date  = new Date();
+
             setDate(date)
             setShow(true);
-            console.log(date)
         }, 1000);
         setTimerId(id);
     }
@@ -55,13 +55,14 @@ function Clock(props:ClockType) {
         }
     }
 
-    let hours:string = zeroAdd(date?.getHours()),
-        minutes:string = zeroAdd(date?.getMinutes()),
-        seconds:string = zeroAdd(date?.getSeconds()),
+    let hours = zeroAdd((date?.getHours() || 0)),
+        minutes:string = zeroAdd((date?.getMinutes() || 0)),
+        seconds:string = zeroAdd((date?.getSeconds()|| 0)),
         days:number,
         ears:number| undefined = date?.getFullYear(),
-        month:string  = zeroAdd(date?.getMonth()),
+        month:string  = zeroAdd((date?.getMonth() || 0)),
         nbrDay:number| undefined = date?.getDate();
+
 
     if (date?.getMonth()) {
        month += 1
