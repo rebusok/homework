@@ -28,10 +28,10 @@ export const homeWorkReducer = (state: Array<PeopleType>, action: ActionType): a
 
 const sortArr = (arr:Array<PeopleType>, typ:PayloadType) => {
     if (typ === 'up') {
-       return  [arr.sort((prev:PeopleType, next:PeopleType) => prev.name < next.name ? -1 : 1)]
+       return  [...arr.sort((prev:PeopleType, next:PeopleType) => prev.name < next.name ? -1 : 1)]
     }
     if (typ === 'down'){
-        return  [arr.sort((prev:PeopleType, next:PeopleType) => prev.name > next.name ? -1 : 1)]
+        return  [...arr.sort((prev:PeopleType, next:PeopleType) => prev.name > next.name ? -1 : 1)]
     }
 }
 const checkAge = (arr:Array<PeopleType>, typ:PayloadType) => {
