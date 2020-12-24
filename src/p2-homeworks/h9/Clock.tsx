@@ -3,14 +3,13 @@ import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 import s from './Clock.module.css';
 
 
-
 type ClockType = {
     closeProps: boolean
 }
 
-function Clock(props:ClockType) {
+function Clock(props: ClockType) {
     const [timerId, setTimerId] = useState<number>(0);
-    const [date, setDate] = useState<Date>();
+    const [date, setDate] = useState<Date>(new Date());
     const [show, setShow] = useState<boolean>(false);
     const [showData, setShowData] = useState<boolean>(false);
     const stop = () => {
@@ -20,15 +19,15 @@ function Clock(props:ClockType) {
     const start = () => {
         stop();
         const id: number = window.setInterval(() => {
-            const date = new Date();
+            const date: Date = new Date();
+
             setDate(date)
             setShow(true);
-            console.log(date)
         }, 1000);
         setTimerId(id);
     }
 
-    if(props.closeProps){
+    if (props.closeProps) {
         clearInterval(timerId);
     }
     const hide = () => {
@@ -43,45 +42,37 @@ function Clock(props:ClockType) {
     const onMouseLeave = () => {
         setShowData(false)
     };
-    const daysWord =  ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const daysWord = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 
-    const zeroAdd = (num:any) => {
+    const zeroAdd = (num: number): number | string => {
 
         if (num < 10) {
-           return  '0' + num
+            return '0' + num
         } else {
-            return  num
+            return num
         }
     }
 
-    let hours:string = zeroAdd(date?.getHours()),
-        minutes:string = zeroAdd(date?.getMinutes()),
-        seconds:string = zeroAdd(date?.getSeconds()),
-        days:number,
-        ears:number| undefined = date?.getFullYear(),
-        month:string  = zeroAdd(date?.getMonth()),
-        nbrDay:number| undefined = date?.getDate();
 
-    if (date?.getMonth()) {
-       month += 1
-    }
-    if (date?.getDay()){
-        days = date?.getDay()
-    } else {
-        days = 0
-    }
+    let hours = zeroAdd((date.getHours() || 0)),
+        minutes = zeroAdd((date.getMinutes() || 0)),
+        seconds = zeroAdd((date.getSeconds() || 0)),
+        days = date.getDay() || 0,
+        ears = date.getFullYear(),
+        month = zeroAdd((date.getMonth() + 1 || 0)),
+        nbrDay = date.getDate();
 
 
     const stringTime = `${hours}:${minutes}:${seconds}`; // fix with date
     const stringDate = ` ${ears}-${month}-${nbrDay} : ${daysWord[days]}`; // fix with date
 
-    const finalClassName = `${s.wrapper}  ${show ?  s.displayOn : s.displayOff}`
+    const finalClassName = `${s.wrapper}  ${show ? s.displayOn : s.displayOff}`
     return (
         <div>
             <div className={finalClassName}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
+                 onMouseEnter={onMouseEnter}
+                 onMouseLeave={onMouseLeave}
             >
                 <div className={s.clock}>
                     {show && (
@@ -98,8 +89,7 @@ function Clock(props:ClockType) {
             </div>
 
 
-
-            <div  className={s.main}>
+            <div className={s.main}>
                 <SuperButton onClick={start}>start</SuperButton>
                 <SuperButton onClick={stop}>stop</SuperButton>
                 <SuperButton onClick={hide}>hide</SuperButton>
