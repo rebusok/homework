@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/homework/static/css/main.f7fb3652.chunk.css",
-    "main.js": "/homework/static/js/main.4c3f0bd1.chunk.js",
-    "main.js.map": "/homework/static/js/main.4c3f0bd1.chunk.js.map",
+    "main.css": "/homework/static/css/main.df88b79e.chunk.css",
+    "main.js": "/homework/static/js/main.e515bf46.chunk.js",
+    "main.js.map": "/homework/static/js/main.e515bf46.chunk.js.map",
     "runtime-main.js": "/homework/static/js/runtime-main.f38b6f31.js",
     "runtime-main.js.map": "/homework/static/js/runtime-main.f38b6f31.js.map",
     "static/css/2.ed590494.chunk.css": "/homework/static/css/2.ed590494.chunk.css",
-    "static/js/2.e2eb5a2f.chunk.js": "/homework/static/js/2.e2eb5a2f.chunk.js",
-    "static/js/2.e2eb5a2f.chunk.js.map": "/homework/static/js/2.e2eb5a2f.chunk.js.map",
+    "static/js/2.b32df668.chunk.js": "/homework/static/js/2.b32df668.chunk.js",
+    "static/js/2.b32df668.chunk.js.map": "/homework/static/js/2.b32df668.chunk.js.map",
     "index.html": "/homework/index.html",
-    "precache-manifest.638892ae330a6cf08b16822c0381a88d.js": "/homework/precache-manifest.638892ae330a6cf08b16822c0381a88d.js",
+    "precache-manifest.10fa289051e273e7b44c58c163806027.js": "/homework/precache-manifest.10fa289051e273e7b44c58c163806027.js",
     "service-worker.js": "/homework/service-worker.js",
     "static/css/2.ed590494.chunk.css.map": "/homework/static/css/2.ed590494.chunk.css.map",
-    "static/css/main.f7fb3652.chunk.css.map": "/homework/static/css/main.f7fb3652.chunk.css.map",
-    "static/js/2.e2eb5a2f.chunk.js.LICENSE.txt": "/homework/static/js/2.e2eb5a2f.chunk.js.LICENSE.txt",
+    "static/css/main.df88b79e.chunk.css.map": "/homework/static/css/main.df88b79e.chunk.css.map",
+    "static/js/2.b32df668.chunk.js.LICENSE.txt": "/homework/static/js/2.b32df668.chunk.js.LICENSE.txt",
     "static/media/img_er.png": "/homework/static/media/img_er.353a8786.png",
-    "static/media/pngegg.png": "/homework/static/media/pngegg.4a61341e.png"
+    "static/media/pngegg.png": "/homework/static/media/pngegg.4a61341e.png",
+    "static/media/simpsons_PNG65.png": "/homework/static/media/simpsons_PNG65.34073cb0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f38b6f31.js",
     "static/css/2.ed590494.chunk.css",
-    "static/js/2.e2eb5a2f.chunk.js",
-    "static/css/main.f7fb3652.chunk.css",
-    "static/js/main.4c3f0bd1.chunk.js"
+    "static/js/2.b32df668.chunk.js",
+    "static/css/main.df88b79e.chunk.css",
+    "static/js/main.e515bf46.chunk.js"
   ]
 }
