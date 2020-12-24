@@ -1,0 +1,17 @@
+.cheack{
+    position: relative;
+   display: flex;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.result {
+    max-width: 200px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 100;
+    img{
+        width: 100px;
+    }
+}
