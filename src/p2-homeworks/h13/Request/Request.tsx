@@ -3,7 +3,8 @@ import SuperCheckbox from '../../h4/common/c3-SuperCheckbox/SuperCheckbox';
 import SuperButton from "../../h4/common/c2-SuperButton/SuperButton";
 import style from './Request.module.scss'
 import RequestsApi from "./RequestsAPI";
-import icon from './pngegg.png'
+import icon from './pngegg.png';
+import icon2 from './simpsons_PNG65.png';
 
 const Request = () => {
     const [postSuc, setPostSuc] = useState<boolean>(false);
@@ -14,7 +15,10 @@ const Request = () => {
         await RequestsApi.PostCall(postSuc).then((res) => {
             console.log(res)
             setResult(`${res.data.errorText}`)
-        }).catch((err) => console.log(err))
+        }).catch((err) => {
+            setResult('error')
+            console.log(err)
+        })
 
     }
 
@@ -24,7 +28,11 @@ const Request = () => {
             <SuperCheckbox onChange={testOnChange}>Check</SuperCheckbox>
 
             <SuperButton onClick={testOnClick} red={false}>POST</SuperButton>
-            <div className={style.result}>{result !== "" ? <span>{result} <img src={icon} alt={'img'}/> </span> : ''}</div>
+            <div className={style.result}>{result === 'error'
+                ? <span>Confirm when sending <img src={icon2} alt={'img'}/> </span>
+                : result !== ""
+                    ? <span>{result} <img src={icon} alt={'img'}/> </span>
+                    : ''}</div>
         </div>
     );
 }
