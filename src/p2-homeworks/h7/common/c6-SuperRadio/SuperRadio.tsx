@@ -31,11 +31,11 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
         <div className={s.wrapper}  key={name + "-" + i}>
         <label className={ o ===value ? s.super_input : s.checkbox_inp}>            
             <input 
-                type={name}
+                type={'radio'}
                 onChange={onChangeCallback}
                 value={o}
                 checked={o ===value}
-                name={'name'}
+                name={name}
                 // name, checked, value, onChange
             />
             
