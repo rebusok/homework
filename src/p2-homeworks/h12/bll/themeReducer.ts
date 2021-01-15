@@ -6,20 +6,25 @@ export type themeReducerTypes = {
 }
 type themeReducerAtionTypes = {
     type:"CHANGE_COLOR"
-    payload: 'dark'| 'red' | 'some'
+    payload: {
+        themeColor:'dark'| 'red' | 'some'
+    }
 }
 
 export const themeReducer = (state:themeReducerTypes = initState, action: themeReducerAtionTypes): themeReducerTypes => { // fix any
     switch (action.type) {
         case "CHANGE_COLOR":
-            return changeThemeC(state, action.payload)
+            return {
+                ...state,
+                ...action.payload
+            }
         default: return state;
     }
 };
 
-export const changeThemeC = (state:themeReducerTypes, payload:any): themeReducerTypes => {
+export const changeThemeC = (payload:any): themeReducerAtionTypes => {
     return {
-        ...state,
-        themeColor:payload
+        type: "CHANGE_COLOR",
+        payload:{themeColor:payload}
     }
 }; // fix any

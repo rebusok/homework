@@ -5,6 +5,7 @@ import SuperRadio from "../h7/common/c6-SuperRadio/SuperRadio";
 import {useDispatch, useSelector} from "react-redux";
 import WrappAcc from "../../p1-main/m1-ui/u1-app/Hoc/layout/wrappAcc/WrappAcc";
 import {AppStoreType} from "../h10/bll/store";
+import { changeThemeC } from "./bll/themeReducer";
 
 
 const themes = ['dark', 'red', 'some'];
@@ -15,7 +16,7 @@ function HW12() {
     const dispatch = useDispatch();
     // useDispatch, onChangeCallback
     const onChangeCallback = (option: any) => {
-        dispatch({type: "CHANGE_COLOR", payload: option})
+        dispatch(changeThemeC(option))
     }
     return (
         <WrappAcc title={'homeworks 12'}>
@@ -25,7 +26,7 @@ function HW12() {
                 homeworks 12
             </span>
                 <SuperRadio
-                    name={"radio"}
+                    name={"radio_color"}
                     options={themes}
                     value={themeColor}
                     onChangeOption={onChangeCallback}
