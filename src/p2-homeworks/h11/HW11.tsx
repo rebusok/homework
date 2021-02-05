@@ -23,6 +23,7 @@ function HW11() {
                 <SuperRange
                     value={value1}
                     onChangeRange={setValue1}
+                    minValue={value1}
                 />
             </div>
 
